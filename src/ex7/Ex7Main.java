@@ -22,7 +22,13 @@ public class Ex7Main {
             float firstDigit = scanner.nextFloat();
             scanner.nextLine();
 
-            String operator = getAndValidateOperator();
+
+            System.out.print("Enter operator - choose one of + - * /: ");
+            String operator = scanner.nextLine();
+            if (!(operator.equals("+")||operator.equals("-")||operator.equals("*")||operator.equals("/"))){
+                System.out.println("Operator not exist");
+                break;
+            }
 
             System.out.print("Enter second digit: ");
             float secondDigit = scanner.nextFloat();
@@ -40,34 +46,34 @@ public class Ex7Main {
         } while (!"Stop".equals(decision));
     }
 
-    public static String getAndValidateOperator() {
-
-        String operator = null;
-        boolean checker = true;
-
-        do {
-
-            System.out.print("Enter operator - choose one of + - * /: ");
-            operator = scanner.nextLine();
-
-            switch (operator) {
-                case "+":
-                    return operator;
-                case "-":
-                    return operator;
-                case "*":
-                    return operator;
-                case "/":
-                    return operator;
-                default:
-                    System.out.println("Operator not exist. Choose one more time.");
-                    break;
-            }
-
-        } while (checker);
-
-        return operator;
-    }
+//    public static String getAndValidateOperator() {
+//
+//        String operator = null;
+//        boolean checker = true;
+//
+//        do {
+//
+//            System.out.print("Enter operator - choose one of + - * /: ");
+//            operator = scanner.nextLine();
+//
+//            switch (operator) {
+//                case "+":
+//                    return operator;
+//                case "-":
+//                    return operator;
+//                case "*":
+//                    return operator;
+//                case "/":
+//                    return operator;
+//                default:
+//                    System.out.println("Operator not exist. Choose one more time.");
+//                    break;
+//            }
+//
+//        } while (checker);
+//
+//        return operator;
+//    }
 
 
     private static float calculate(float firstDigit, float secondDigit, String operator) {
@@ -93,6 +99,5 @@ public class Ex7Main {
 
         return 0;
     }
-
 }
 
