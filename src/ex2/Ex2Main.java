@@ -44,8 +44,13 @@ public class Ex2Main {
         float circumference = claculateCircumferenceOfACircle(diameterFromUser);
         float area = claculateAreaOfACircle(diameterFromUser);
 
+
         System.out.println("Circumference Of a circle: " + circumference);
         System.out.println("Area of a circle: " + area);
+
+//        System.out.println(claculateAreaOfACircleGenerics(2));
+//        System.out.println(claculateAreaOfACircleGenerics(2.0f));
+//        System.out.println(claculateAreaOfACircleGenerics(2.0));
 
     }
 
@@ -65,8 +70,10 @@ public class Ex2Main {
         return (float) (Math.PI* Math.pow(diameter,2)/4);
     }
 
-//    private static <T extends Number> T claculateAreaOfACircleGenerics(T diameter){
-//        return (T) (Math.PI* Math.pow((double)diameter,2)/4);
+    //metoda generczyna
+
+//    private static <T extends Number> float claculateAreaOfACircleGenerics(T diameter){
+//        return (float) (Math.PI* Math.pow((double)diameter,2)/4);
 //    }
 
 }
