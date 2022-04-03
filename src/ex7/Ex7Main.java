@@ -1,6 +1,8 @@
 package ex7;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Ex7Main {
 
@@ -92,6 +94,18 @@ public class Ex7Main {
         }
 
         return 0;
+    }
+
+    public static boolean isValidateOperator(String operator){
+
+        Pattern pattern = Pattern.compile("[\\+\\-\\*\\/]");
+        Matcher matcher = pattern.matcher(operator);
+
+        if (matcher.matches()){
+            return true;
+        }
+
+        return false;
     }
 
 }
